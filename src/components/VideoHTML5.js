@@ -14,8 +14,12 @@ var videoHTML5 = React.createClass({
   // },
 
   // getInitialState: function() {
+  //   if(!this.props.src){
+  //     console.log("no Video Source givin :(");
+  //     console.log(this.props.src || 'video/video.mp4')
+  //   }
   //   return {
-  //     value: this.props.value || ''
+  //     src: this.props.value || 'video/video.mp4'
   //   };
   // },
 
@@ -23,7 +27,8 @@ var videoHTML5 = React.createClass({
    * @return {object}
    */
   render: function() {
-
+    console.log(this.props)
+    // var videoLoc = 'video/video.mp4'
     // var video = document.querySelector('video');
 
     // navigator.webkitGetUserMedia({audio: true, video: true}, function(stream) {
@@ -31,7 +36,7 @@ var videoHTML5 = React.createClass({
     // }, function(){});
     return (
       
-      <video src="video/video.mp4" controls/>
+      <video checked={true} src={this.props.src} controls/>
 
     );
   },

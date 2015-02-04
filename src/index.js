@@ -7,7 +7,7 @@ var HelloWorld = React.createClass({
   render: function() {
     return (
       <p>
-      <VideoHTML5 />
+      <VideoHTML5 src='video/video.mp4' />
         Hello, <input type="text" placeholder="Your name here Please s" />!
         It is {this.props.date.toTimeString()}
       </p>
