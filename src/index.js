@@ -1,3 +1,7 @@
+var Dispatcher = require('flux').Dispatcher;
+
+
+
 var HelloWorld = React.createClass({
   render: function() {
     return (
