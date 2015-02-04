@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var react = require('gulp-react');
  
-gulp.task('default', function () {
+gulp.task('build', function () {
     return gulp.src('src/*')
         .pipe(react())
         .pipe(gulp.dest('lib'));
