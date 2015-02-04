@@ -4,12 +4,19 @@ var EmotionList = require('./components/emotionList');
 var EmotionStore = require('./stores/EmotionsStore');
 
 
-var HelloWorld = React.createClass({
+var EmotionApp = React.createClass({
+  getInitialState: function (){
+    return {
+      allEmotions: EmotionStore.getAll()
+    }
+  },
+
+
   render: function() {
     return (
       <p>
       <VideoHTML5 src='video/video.mp4' />
-      <EmotionList/>
+      <EmotionList allEmotions={this.state.allEmotions}/>
         Hello, <input type="text" placeholder="Your name here Please s" />!
         It is {this.props.date.toTimeString()}
       </p>
@@ -17,10 +24,9 @@ var HelloWorld = React.createClass({
   }
 });
 
-// console.log(VideoHTML5)
 setInterval(function() {
   React.render(
-    <HelloWorld date={new Date()} />,
+    <EmotionApp date={new Date()} />,
     document.getElementById('example')
   );
 }, 500);
