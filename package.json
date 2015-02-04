@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/christophertrev/fluxTODO",
   "devDependencies": {
-    "gulp": "^3.8.10"
+    "gulp": "^3.8.10",
+    "gulp-react": "^2.0.0"
   }
 }
