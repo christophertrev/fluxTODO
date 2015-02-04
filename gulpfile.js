@@ -1,6 +1,7 @@
 var gulp = require('./gulp')([
   'build',
-  'js'
+  'js',
+  'lint'
 ]);
 
 gulp.task('watch', function (){
