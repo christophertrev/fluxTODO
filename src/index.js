@@ -1,6 +1,7 @@
 // var Dispatcher = require('flux').Dispatcher;
 var VideoHTML5 = require('./components/VideoHTML5');
 var EmotionList = require('./components/emotionList');
+var EmotionStore = require('./stores/EmotionsStore');
 
 
 var HelloWorld = React.createClass({
