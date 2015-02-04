@@ -2,9 +2,9 @@ var gulp = require('gulp');
 var react = require('gulp-react');
  
 gulp.task('build', function () {
-    return gulp.src('src/*')
-        .pipe(react())
-        .pipe(gulp.dest('lib'));
+  return gulp.src('src/*')
+    .pipe(react())
+    .pipe(gulp.dest('lib'));
 });
 
 
