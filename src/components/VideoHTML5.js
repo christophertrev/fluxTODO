@@ -31,7 +31,7 @@ var videoHTML5 = React.createClass({
     // }, function(){});
     return (
       
-      <video/>
+      <video src="video/video.mp4" controls/>
 
     );
   },
