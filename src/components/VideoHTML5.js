@@ -22,9 +22,17 @@ var videoHTML5 = React.createClass({
   /**
    * @return {object}
    */
-  render: function() /*object*/ {
+  render: function() {
+
+    // var video = document.querySelector('video');
+
+    // navigator.webkitGetUserMedia({audio: true, video: true}, function(stream) {
+    //   video.src = window.URL.createObjectURL(stream);
+    // }, function(){});
     return (
-      <p> Hello there! </p>
+      
+      <video/>
+
     );
   },
 
