@@ -1,3 +1,5 @@
+var EmotionItem = require('./emotionItem')
+
 var EmotionList = React.createClass({
 
 
@@ -6,12 +8,12 @@ var EmotionList = React.createClass({
     var allTodos = {'key':"value", 'key2':"value"}
     for (var key in allTodos) {
       // emotions.push(<TodoItem key={key} todo={allemotions[key]} />);
-      emotions.push(<li>yo!</li>);
+      emotions.push(<EmotionItem />);
     }
 
 
     return (
-      <ul id="todo-list">{emotions}</ul>
+      <ul id="emotion-list">{emotions}</ul>
     )
   }
 
