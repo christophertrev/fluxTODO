@@ -27,7 +27,7 @@ var videoHTML5 = React.createClass({
    * @return {object}
    */
   render: function() {
-    console.log(this.props)
+    // console.log(this.props)
     // var videoLoc = 'video/video.mp4'
     // var video = document.querySelector('video');
 

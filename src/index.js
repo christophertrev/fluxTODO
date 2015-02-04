@@ -1,6 +1,6 @@
 // var Dispatcher = require('flux').Dispatcher;
-var VideoHTML5 = require('./components/VideoHTML5')
-
+var VideoHTML5 = require('./components/VideoHTML5');
+var EmotionList = require('./components/emotionList');
 
 
 var HelloWorld = React.createClass({
@@ -8,6 +8,7 @@ var HelloWorld = React.createClass({
     return (
       <p>
       <VideoHTML5 src='video/video.mp4' />
+      <EmotionList/>
         Hello, <input type="text" placeholder="Your name here Please s" />!
         It is {this.props.date.toTimeString()}
       </p>
