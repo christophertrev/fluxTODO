@@ -6,3 +6,6 @@ gulp.task('build', function () {
         .pipe(react())
         .pipe(gulp.dest('lib'));
 });
+
+
+gulp.task('default', ['build']);
