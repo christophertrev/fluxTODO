@@ -7,5 +7,8 @@ gulp.task('build', function () {
     .pipe(gulp.dest('lib'));
 });
 
+gulp.task('watch', function (){
+  gulp.watch('src/*', ['build']);
+})
 
 gulp.task('default', ['build']);
