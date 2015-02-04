@@ -1,6 +1,5 @@
 var EmotionItem = React.createClass({
 
-
   render: function (){
     return (
       <li>
@@ -8,9 +7,6 @@ var EmotionItem = React.createClass({
       </li>
     )
   }
-
-
-
 })
 
 
