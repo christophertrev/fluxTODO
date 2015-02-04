@@ -4,7 +4,7 @@ var EmotionItem = React.createClass({
     // console.log(this.props)
     return (
       <li>
-        {this.props.emotion.description}
+        {this.props.emotion.emotion}
       </li>
     )
   }

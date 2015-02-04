@@ -24,9 +24,8 @@ var EmotionApp = React.createClass({
   }
 });
 
-setInterval(function() {
-  React.render(
-    <EmotionApp date={new Date()} />,
-    document.getElementById('example')
-  );
-}, 500);
+// setInterval(function() {
+React.render(
+  <EmotionApp date={new Date()} />,
+  document.getElementById('example')
+);

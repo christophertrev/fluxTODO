@@ -6,8 +6,9 @@ var AppDispatcher = require('../dispatcher/AppDispatcher');
 module.exports = {
 
   receiveAll: function(rawMessages) {
+    console.log('in receiveAll', rawMessages)
     AppDispatcher.handleServerAction({
-      type: 'RECEIVE_RAW_MESSAGES',
+      type: 'RECEIVE_MESSAGES',
       rawMessages: rawMessages
     });
   },
