@@ -5,11 +5,11 @@ var cx = require('react/lib/cx');
 var EmotionItem = React.createClass({
 
   render: function (){
-    console.log(this.props)
+    console.log('in emtotionItme',this.props)
     return (
       <li
       className = {cx({
-        'active': false
+        'active': this.props.emotion.id === this.props.selectedID
       })} 
       onClick={this._onClick}>
         {this.props.emotion.emotion}
