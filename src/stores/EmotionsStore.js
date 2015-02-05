@@ -6,11 +6,16 @@ var AppDispatcher = require('../dispatcher/AppDispatcher');
 
 var CHANGE_EVENT = 'change';
 var _emotions = {};
+var _selectedID = null;
 
 var EmotionsStore = assign({}, EventEmitter.prototype, {
   
   getAll: function() {
     return _emotions;
+  },
+
+  getSelectedID: function (){
+    return _selectedID;
   },
 
   emitChange: function() {
@@ -44,6 +49,13 @@ EmotionsStore.dispatchToken = AppDispatcher.register(function(payload) {
       // console.log(this)
       EmotionsStore.emitChange();
       break;
+    case 'SELECT_EMOTION':
+      // this._selectedID = _emotions[action.id].selected;
+      // this._selectedID = action.id
+      // console.log('action???', action.id)
+      _selectedID = action.id
+      EmotionsStore.emitChange();
+      break
   }
   
 
