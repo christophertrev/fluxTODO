@@ -1,7 +1,7 @@
 var EventEmitter = require('events').EventEmitter;
 var assign = require('object-assign');
 var AppDispatcher = require('../dispatcher/AppDispatcher');
-var webAPIUtils = require('../utils/webAPIUtils');
+
 
 
 var CHANGE_EVENT = 'change';
@@ -41,12 +41,14 @@ EmotionsStore.dispatchToken = AppDispatcher.register(function(payload) {
           emotion: action.rawMessages[i]
         }
       }
+      // console.log(this)
+      EmotionsStore.emitChange();
       break;
   }
   
 
 })
 
-webAPIUtils.getAllEmotions();
+// webAPIUtils.getAllEmotions();
 
 module.exports = EmotionsStore;

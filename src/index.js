@@ -2,6 +2,7 @@
 var VideoHTML5 = require('./components/VideoHTML5');
 var EmotionList = require('./components/emotionList');
 var EmotionStore = require('./stores/EmotionsStore');
+var webAPIUtils = require('./utils/webAPIUtils');
 
 
 
@@ -17,13 +18,14 @@ var EmotionApp = React.createClass({
   getInitialState: function (){
     return getTodoState();
   },
-  
+
   componentDidMount: function() {
-    TodoStore.addChangeListener(this._onChange);
+    EmotionStore.addChangeListener(this._onChange);
+    webAPIUtils.getAllEmotions();
   },
 
   componentWillUnmount: function() {
-    TodoStore.removeChangeListener(this._onChange);
+    EmotionStore.removeChangeListener(this._onChange);
   },
 
   render: function() {
