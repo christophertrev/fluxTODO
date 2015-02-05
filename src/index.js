@@ -4,13 +4,27 @@ var EmotionList = require('./components/emotionList');
 var EmotionStore = require('./stores/EmotionsStore');
 
 
+
+var getTodoState = function (){
+  return {
+    allEmotions: EmotionStore.getAll()
+  }
+}
+
+
+
 var EmotionApp = React.createClass({
   getInitialState: function (){
-    return {
-      allEmotions: EmotionStore.getAll()
-    }
+    return getTodoState();
+  },
+  
+  componentDidMount: function() {
+    TodoStore.addChangeListener(this._onChange);
   },
 
+  componentWillUnmount: function() {
+    TodoStore.removeChangeListener(this._onChange);
+  },
 
   render: function() {
     return (
@@ -21,6 +35,10 @@ var EmotionApp = React.createClass({
         It is {this.props.date.toTimeString()}
       </p>
     );
+  },
+
+  _onChange: function (){
+    this.setState(getTodoState());
   }
 });
 

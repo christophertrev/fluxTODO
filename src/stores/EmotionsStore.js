@@ -3,18 +3,27 @@ var assign = require('object-assign');
 var AppDispatcher = require('../dispatcher/AppDispatcher');
 var webAPIUtils = require('../utils/webAPIUtils');
 
-var _emotions = {};
-// var _emotions = {
-//   1: {emotion: 'happy', description:'Having a great Day'},
-//   2: {emotion:'sad', description:'Day could be going better'}
-// };
 
+var CHANGE_EVENT = 'change';
+var _emotions = {};
 
 var EmotionsStore = assign({}, EventEmitter.prototype, {
   
   getAll: function() {
     return _emotions;
   },
+
+  emitChange: function() {
+    this.emit(CHANGE_EVENT);
+  },
+
+  addChangeListener: function(callback) {
+    this.on(CHANGE_EVENT, callback);
+  },
+
+  removeChangeListener: function(callback) {
+    this.removeListener(CHANGE_EVENT, callback);
+  }
 
 });
 
@@ -24,8 +33,8 @@ EmotionsStore.dispatchToken = AppDispatcher.register(function(payload) {
   switch(action.type){
 
     case 'RECEIVE_MESSAGES':
-      console.log('am in recived RECEIVE_MESSAGES')
-      console.log(action.rawMessages)
+      // console.log('am in recived RECEIVE_MESSAGES')
+      // console.log(action.rawMessages)
       for ( var i  in action.rawMessages){
         _emotions[i] = {
           id: i,
@@ -38,6 +47,6 @@ EmotionsStore.dispatchToken = AppDispatcher.register(function(payload) {
 
 })
 
-webAPIUtils.getAllEmotions()
+webAPIUtils.getAllEmotions();
 
 module.exports = EmotionsStore;
