@@ -15,7 +15,7 @@ var EmotionList = React.createClass({
       emotions.push(<EmotionItem {...this.props} key= {key}  emotion= {allEmotions[key]}/>);
     }
     return (
-      <ul id="emotionList">{emotions}</ul>
+      <ul className={"emotionList"}>{emotions}</ul>
     )
   },
 

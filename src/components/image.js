@@ -1,4 +1,4 @@
-
+var cx = require('react/lib/cx');
 
 
 var EmotionList = React.createClass({
@@ -12,7 +12,11 @@ var EmotionList = React.createClass({
     }
     console.log(imageSRC)
     return (
-      <img src= {imageSRC}/>
+      <img
+      className = {cx({
+        'emotionImg': true
+      }) }
+      src= {imageSRC}/>
     )
   }
 
