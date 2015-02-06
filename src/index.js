@@ -35,10 +35,10 @@ var EmotionApp = React.createClass({
       // It is {this.props.date.toTimeString()}
   render: function() {
     return (
-      <p>
+      
       <EmotionImage selectedID={this.state.selectedID} allEmotions={this.state.allEmotions} />
       <EmotionList selectedID={this.state.selectedID} allEmotions={this.state.allEmotions}/>
-      </p>
+      
     );
   },
 
