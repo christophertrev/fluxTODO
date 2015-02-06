@@ -9,7 +9,8 @@ var EmotionItem = React.createClass({
     return (
       <li
       className = {cx({
-        'active': this.props.emotion.id === this.props.selectedID
+        'active': this.props.emotion.id === this.props.selectedID,
+        'emotionItem': true
       })} 
       onClick={this._onClick}>
         {this.props.emotion.emotion}
