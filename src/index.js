@@ -31,13 +31,13 @@ var EmotionApp = React.createClass({
   },
 
       // <VideoHTML5 src='video/video.mp4' /> 
+      // Hello, <input type="text" placeholder="Your name here Please s" />!
+      // It is {this.props.date.toTimeString()}
   render: function() {
     return (
       <p>
       <EmotionImage selectedID={this.state.selectedID} allEmotions={this.state.allEmotions} />
       <EmotionList selectedID={this.state.selectedID} allEmotions={this.state.allEmotions}/>
-        Hello, <input type="text" placeholder="Your name here Please s" />!
-        It is {this.props.date.toTimeString()}
       </p>
     );
   },
