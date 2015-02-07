@@ -3,7 +3,7 @@ var gulp = require('./gulp')([
   'js',
   'lint'
 ]);
-
+//adding comment to test submodules
 gulp.task('watch', function (){
   gulp.watch('src/*', ['build']);
 });
